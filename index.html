@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRONVERSE GYM | Forge Your Strongest Self</title>
+    <meta name="description" content="Futuristic luxury fitness club. Premium strength training, AI assistance, and elite coaching.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">IRON<span class="highlight">VERSE</span></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#trainers" class="nav-link">Trainers</a></li>
+                <li><a href="#membership" class="nav-link">Membership</a></li>
+                <li><a href="#ai-assistant" class="nav-link">AI Coach</a></li>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="btn btn-primary open-membership-btn" data-plan="PRO">JOIN NOW</button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-canvas-container">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-fallback" id="hero-fallback"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="badge-pill">NEXT-GEN FITNESS EXPERIENCE</div>
+            <h1 class="hero-title">FORGE YOUR <span class="gradient-text">STRONGEST</span> SELF.</h1>
+            <p class="hero-subtitle">Train smarter. Move stronger. Become unstoppable with futuristic technology and elite coaching.</p>
+            
+            <div class="hero-cta-group">
+                <a href="#membership" class="btn btn-glow">START TRAINING</a>
+                <a href="#programs" class="btn btn-outline">EXPLORE PROGRAMS</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">MEMBERS</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="20">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">TRAINERS</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">PROGRAMS</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="programs" class="section">
+        <div class="section-header">
+            <h2 class="section-title">ELITE <span class="gradient-text">PROGRAMS</span></h2>
+            <p class="section-subtitle">Engineered for maximum physical evolution and biomechanical efficiency.</p>
+        </div>
+
+        <div class="program-grid">
+            <div class="glass-card tilt-card" data-tilt>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 5v14M18 5v14M3 9v6M21 9v6M9 12h6"/></svg>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Advanced</span>
+                    <span class="tag tag-blue">60 Mins</span>
+                </div>
+                <h3>Strength Training</h3>
+                <p>Heavy compound loading protocols designed to build maximum power, neuromuscular adaptation, and dense muscle tissue.</p>
+                <button class="btn-text open-membership-btn" data-plan="PRO">VIEW PROGRAM &rarr;</button>
+            </div>
+
+            <div class="glass-card tilt-card" data-tilt>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Intermediate</span>
+                    <span class="tag tag-blue">45 Mins</span>
+                </div>
+                <h3>Muscle Building</h3>
+                <p>Hypertrophy-focused volume training targeting specific muscle groups with optimized mechanical tension and fatigue control.</p>
+                <button class="btn-text open-membership-btn" data-plan="PRO">VIEW PROGRAM &rarr;</button>
+            </div>
+
+            <div class="glass-card tilt-card" data-tilt>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">All Levels</span>
+                    <span class="tag tag-blue">50 Mins</span>
+                </div>
+                <h3>Functional Training</h3>
+                <p>Dynamic movement patterns targeting core stability, multi-planar mobility, agility, and real-world athletic durability.</p>
+                <button class="btn-text open-membership-btn" data-plan="PRO">VIEW PROGRAM &rarr;</button>
+            </div>
+
+            <div class="glass-card tilt-card" data-tilt>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Custom</span>
+                    <span class="tag tag-blue">1-on-1</span>
+                </div>
+                <h3>Personal Training</h3>
+                <p>Bespoke coaching tailored directly to your unique anatomy, biofeedback, goals, and high-performance lifestyle.</p>
+                <button class="btn-text open-membership-btn" data-plan="ELITE">VIEW PROGRAM &rarr;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="section">
+        <div class="section-header">
+            <h2 class="section-title">MASTER <span class="gradient-text">COACHES</span></h2>
+            <p class="section-subtitle">World-class biomechanics specialists and performance architects.</p>
+        </div>
+
+        <div class="trainer-grid">
+            <div class="glass-card trainer-card">
+                <div class="trainer-avatar-wrapper">
+                    <div class="avatar-graphic avatar-1">
+                        <svg viewBox="0 0 100 100" class="avatar-svg">
+                            <circle cx="50" cy="35" r="22" fill="url(#grad1)"/>
+                            <path d="M15 90 C15 60, 35 55, 50 55 C65 55, 85 60, 85 90 Z" fill="url(#grad1)"/>
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00f0ff"/>
+                                    <stop offset="100%" stop-color="#0044ff"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="trainer-info">
+                    <h3>Alex Carter</h3>
+                    <span class="trainer-role">Strength Coach</span>
+                    <p>10+ years optimizing powerlifters and elite athletes. Specialist in CNS adaptation and power output.</p>
+                </div>
+            </div>
+
+            <div class="glass-card trainer-card">
+                <div class="trainer-avatar-wrapper">
+                    <div class="avatar-graphic avatar-2">
+                        <svg viewBox="0 0 100 100" class="avatar-svg">
+                            <circle cx="50" cy="35" r="22" fill="url(#grad2)"/>
+                            <path d="M15 90 C15 60, 35 55, 50 55 C65 55, 85 60, 85 90 Z" fill="url(#grad2)"/>
+                            <defs>
+                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="100%" stop-color="#00f0ff"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="trainer-info">
+                    <h3>Ryan Blake</h3>
+                    <span class="trainer-role">Performance Coach</span>
+                    <p>Expert in speed, agility, kinetic energy transfer, and athletic injury prevention protocols.</p>
+                </div>
+            </div>
+
+            <div class="glass-card trainer-card">
+                <div class="trainer-avatar-wrapper">
+                    <div class="avatar-graphic avatar-3">
+                        <svg viewBox="0 0 100 100" class="avatar-svg">
+                            <circle cx="50" cy="35" r="22" fill="url(#grad3)"/>
+                            <path d="M15 90 C15 60, 35 55, 50 55 C65 55, 85 60, 85 90 Z" fill="url(#grad3)"/>
+                            <defs>
+                                <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7000ff"/>
+                                    <stop offset="100%" stop-color="#00f0ff"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="trainer-info">
+                    <h3>Maya Wilson</h3>
+                    <span class="trainer-role">Fitness & Mobility Coach</span>
+                    <p>Specializes in functional hypertrophy, postural correction, and high-intensity metabolic conditioning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="section">
+        <div class="section-header">
+            <h2 class="section-title">MEMBERSHIP <span class="gradient-text">TIERS</span></h2>
+            <p class="section-subtitle">Flexible plans designed for high performers. No hidden fees.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="glass-card pricing-card">
+                <div class="card-header">
+                    <h3>STARTER</h3>
+                    <div class="price"><span class="currency">$</span>9<span class="period">/mo</span></div>
+                </div>
+                <ul class="feature-list">
+                    <li><span class="check">✓</span> Standard Gym Access</li>
+                    <li><span class="check">✓</span> Basic Training Programs</li>
+                    <li><span class="check">✓</span> Progress Tracking Dashboard</li>
+                    <li class="disabled"><span class="cross">✕</span> AI Fitness Assistant</li>
+                    <li class="disabled"><span class="cross">✕</span> Personal Training Sessions</li>
+                </ul>
+                <button class="btn btn-outline full-width open-membership-btn" data-plan="STARTER">SELECT STARTER</button>
+            </div>
+
+            <div class="glass-card pricing-card featured">
+                <div class="popular-badge">MOST POPULAR</div>
+                <div class="card-header">
+                    <h3>PRO</h3>
+                    <div class="price"><span class="currency">$</span>19<span class="period">/mo</span></div>
+                </div>
+                <ul class="feature-list">
+                    <li><span class="check">✓</span> Unlimited 24/7 Gym Access</li>
+                    <li><span class="check">✓</span> All Premium Programs Included</li>
+                    <li><span class="check">✓</span> Advanced Progress Tracking</li>
+                    <li><span class="check">✓</span> Free AI Fitness Assistant</li>
+                    <li class="disabled"><span class="cross">✕</span> 1-on-1 Personal Training</li>
+                </ul>
+                <button class="btn btn-glow full-width open-membership-btn" data-plan="PRO">GET PRO ACCESS</button>
+            </div>
+
+            <div class="glass-card pricing-card">
+                <div class="card-header">
+                    <h3>ELITE</h3>
+                    <div class="price"><span class="currency">$</span>39<span class="period">/mo</span></div>
+                </div>
+                <ul class="feature-list">
+                    <li><span class="check">✓</span> Everything in Pro Tier</li>
+                    <li><span class="check">✓</span> 4x Monthly Personal Training</li>
+                    <li><span class="check">✓</span> Custom AI & Human Workouts</li>
+                    <li><span class="check">✓</span> Priority Recovery Zone Access</li>
+                    <li><span class="check">✓</span> 24/7 VIP Support</li>
+                </ul>
+                <button class="btn btn-outline full-width open-membership-btn" data-plan="ELITE">SELECT ELITE</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-assistant" class="section">
+        <div class="section-header">
+            <div class="badge-pill">FREE INTEGRATED AI</div>
+            <h2 class="section-title">IRONVERSE <span class="gradient-text">AI COACH</span></h2>
+            <p class="section-subtitle">Instant algorithmic fitness intelligence. Ask questions, receive instant workouts.</p>
+        </div>
+
+        <div class="glass-card chat-container">
+            <div class="chat-header">
+                <div class="chat-status">
+                    <span class="status-dot"></span>
+                    <span>IRONVERSE AI v2.4 Active</span>
+                </div>
+                <span class="free-badge">100% FREE</span>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hello! I am your free IRONVERSE Fitness Assistant. How can I assist your training regimen today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-suggestions">
+                <button class="chip" data-query="Give me a beginner workout routine">Beginner Workout</button>
+                <button class="chip" data-query="How can I improve my push-ups?">Push-up Form</button>
+                <button class="chip" data-query="What workout should I do today?">Daily Recommendation</button>
+                <button class="chip" data-query="How much protein should I eat?">Protein Guide</button>
+            </div>
+
+            <form id="chat-form" class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Ask about workouts, form, or nutrition..." required autocomplete="off">
+                <button type="submit" class="btn btn-glow btn-icon" aria-label="Send Message">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section id="dashboard" class="section">
+        <div class="section-header">
+            <h2 class="section-title">TRAINING <span class="gradient-text">DASHBOARD</span></h2>
+            <p class="section-subtitle">Real-time local activity tracking saved directly in your browser.</p>
+        </div>
+
+        <div class="glass-card dashboard-container">
+            <div class="dashboard-grid">
+                <div class="dash-card">
+                    <span class="dash-label">Streak Day</span>
+                    <div class="dash-value" id="dash-streak">5</div>
+                    <span class="dash-sub">🔥 Active Streak</span>
+                </div>
+                <div class="dash-card">
+                    <span class="dash-label">Workouts (This Month)</span>
+                    <div class="dash-value" id="dash-count">14</div>
+                    <span class="dash-sub">⚡ Completed Sessions</span>
+                </div>
+                <div class="dash-card">
+                    <span class="dash-label">Time Trained</span>
+                    <div class="dash-value" id="dash-time">420</div>
+                    <span class="dash-sub">⏱️ Total Minutes</span>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span>Monthly Goal Progress</span>
+                    <span id="dash-percentage">70%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="dash-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <button class="btn btn-glow" id="btn-log-workout">LOG TODAY'S WORKOUT (+45m)</button>
+                <button class="btn btn-outline" id="btn-reset-stats">RESET DATA</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2 class="section-title">CONNECT WITH <span class="gradient-text">US</span></h2>
+            <p class="section-subtitle">Have questions or ready to join in person? Send us a message.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <form id="contact-form" class="glass-card contact-form">
+                <div class="form-group">
+                    <label for="contact-name">FULL NAME</label>
+                    <input type="text" id="contact-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">EMAIL ADDRESS</label>
+                    <input type="email" id="contact-email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">MESSAGE</label>
+                    <textarea id="contact-message" rows="4" placeholder="How can we help you reach your goals?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-glow full-width">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <
